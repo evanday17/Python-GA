@@ -2,9 +2,9 @@
 
 def temp_converter():
     x = (input("What is your temp?"))
-    x = float(x)
+    x = float(x)  # convert to a float
     y = (x - 32) * 5 / 9
-    y = str(round(y,2))
+    y = str(round(y,2))  # convert this to a str and round so i can use in my final print statement
 
     if x <= 97:
         print("Your temp is pretty low you warm up ASAP")
@@ -13,7 +13,7 @@ def temp_converter():
     else:
         print("That is a good looking tempature")
 
-    print("\tIncase you where wondering that is " + y + " in Celsius")
+    print("\tIncase you where wondering that is " + y + " in Celsius")  # indent to make it look a bit cleaner
 
 temp_converter()
 
