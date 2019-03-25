@@ -1,26 +1,22 @@
-def rates():
-    # ask user for deposit and convert to float
-    while True:
-        try:
-            x= (input("how much are you putting down?"))
-            x=float(x)
-            break
-        except:
-            print("enter numbers only please")
-    # ask user for years and convert to float
-    while True:
-        try:
-            y= (input("how many years will this sit?"))
-            y=float(y)
-            break
-        except:
-            print("enter numbers only please")
- 
-    answer = x * .041 * y
- 
-    # convert answer to $$$$
-    answer = '$' + str(round(answer,2))
- 
-    print('You will earn ' + answer + " over " + str(y) +  'years')
-rates()
+# don't have a solution to validate they enter numbers yet...maybe could use pypi?
+
+def temp_converter():
+    x = (input("What is your temp?"))
+    x = float(x)
+    y = (x - 32) * 5 / 9
+    y = str(round(y,2))
+
+    if x <= 97:
+        print("Your temp is pretty low you warm up ASAP")
+    elif x >= 100:
+        print("Your temp is pretty high, should chill out")
+    else:
+        print("That is a good looking tempature")
+
+    print("\tIncase you where wondering that is " + y + " in Celsius")
+
+temp_converter()
+
+
+
 
