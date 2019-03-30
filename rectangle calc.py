@@ -22,7 +22,6 @@ def compute_rec():
 
     area = x * y
     area = str(round(area, 2)) #rounds float 2 decimal places
-    print("Got it, the area of your rectangle is " + area + " " + z + " long")
-
+    print("Got it, the area of your rectangle is " + area + " " + z +)
 
 compute_rec()
