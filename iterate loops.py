@@ -1,4 +1,4 @@
-# this will count the number of letters and numbers
+'''# this will count the number of letters and numbers
 word = "hello.world123"
 digit_counter = 0
 alpha_counter = 0
@@ -9,4 +9,11 @@ for i in word:
     elif i.isalpha():
         alpha_counter += 1 #checks if alpha...if true add one to our alpha counter
 print('alpha ', alpha_counter)
-print('digit', digit_counter)
+print('digit', digit_counter)'''
+
+mylist = ['milk', 'rice', 'steak']
+x = input("what do you want to remove")
+if x in mylist:
+    mylist.remove(x)
+print(mylist)
+
