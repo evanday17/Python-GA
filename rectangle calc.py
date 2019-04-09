@@ -3,7 +3,7 @@ def compute_rec():
     z = (input('What type of units are you using? Cms? Ft? ect'))  # could spend more time refining this part
     print("PLEASE ENTER ONLY NUMBERS TO THE FOLLOWING QUESTIONS")
 
-    while True:  # loops so we require ints instead of strs...this is a better way to do this just not sure of how yet
+    while True:  # loops so we require ints instead of strs...there is a better way to do this just not sure of how yet
 
         try:
             x = (input("how tall is the rectangle?"))
