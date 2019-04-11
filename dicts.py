@@ -10,6 +10,7 @@ print(student.items())
 for key, value in student.items():
     print(key, " ", value)'''
 
+
 student = {
     1: {
         "name": "Suresh",

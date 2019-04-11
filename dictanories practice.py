@@ -42,11 +42,11 @@ students = {
 good_students = []
 
 for key, values in students.items():
-    # print('key : ', key)
-    if values['gpa'] > 3.0:
+    print('key : ', key)
+    # if values['gpa'] > 3.0:
         # print('firing if key : ', key)
-        good_students.append(values['name'])
+        # good_students.append(values['name'])
 
-print('Students with gpa > 3.0')
-for i in good_students:
-    print(i)
+# print('Students with gpa > 3.0')
+# for i in good_students:
+#    print(i)
