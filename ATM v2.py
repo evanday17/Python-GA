@@ -40,23 +40,6 @@ class Bank:
             self.user_validation = input("Please enter your username")
             self.password_validation = input('Please enter your password')
 
-            def savings_balance(self):
-                for keys, values in self.data_base.items():
-                    for k, v in values.items():
-                        if keys == self.user_validation:
-                            if k == 'Savings Balance':
-                                print(v)
-
-                def checkings_balance(self):  # print the checkings balance
-                    pass
-
-                def deposit(self):  # add deopsit to either the checkings or savings account
-                    pass
-
-                def withdraw(
-                        self):  # take user input and subtract that from either the savings account or checkings accont
-                    print("How much would you like to withdraw?")
-
             while True:
                 if self.user_validation in self.data_base:  # checks to see that the user name in in the dict
                     for values in self.data_base.values():  # iterates through the values
@@ -73,13 +56,30 @@ class Bank:
                 else:
                     print("You entered an invalid user name and/or password")
 
+                def savings_balance(self):
+                    for keys, values in self.data_base.items():
+                        for k, v in values.items():
+                            if keys == self.user_validation:
+                                if k == 'Savings Balance':
+                                    print(v)
+
+                def checkings_balance(self):  # print the checkings balance
+                    pass
+
+                def deposit(self):  # add deopsit to either the checkings or savings account
+                    pass
+
+                def withdraw(
+                        self):  # take user input and subtract that from either the savings account or checkings accont
+                    print("How much would you like to withdraw?")
+
                 self.user_input = input('Please select an option')
 
                 if self.user_input == 'C':
                     checkings_balance()
 
                 elif self.user_input == 'S':
-                    savings_balance()
+                    savings_balance(self)
 
                 elif self.user_input == 'D':
                     deposit()
