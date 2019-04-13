@@ -44,8 +44,8 @@ class Bank:
                 if self.user_validation in self.data_base:  # checks to see that the user name in in the dict
                     for values in self.data_base.values():  # iterates through the values
                         if values['Password'] == self.password_validation:  # if the value of pw is == user input...start program
+                            print()
                             print('Great, welcome ', self.user_validation)
-                            print('How can I help you today?')
                             print()
                             print()
                             print('To check your savings balance: Press S')
@@ -64,10 +64,31 @@ class Bank:
                                     print(v)
 
                 def checkings_balance(self):  # print the checkings balance
-                    pass
+                    for keys, values in self.data_base.items():
+                        for k, v in values.items():
+                            if keys == self.user_validation:
+                                if k == 'Checking Balance':
+                                    print(v)
+                                    print('')
 
                 def deposit(self):  # add deopsit to either the checkings or savings account
-                    pass
+                    what_account = input("What account would you like to deposit to: Savings or Checkings")
+                    amount_d = input("how much are you going to deposit")
+
+                    if what_account == 'Savings':
+                        for keys, values in self.data_base: #     getting error here
+                            for k, v in values.items():
+                                if keys == self.user_validation and k == 'Savings Balance':
+                                    new_amount = v + amount_d
+                                    self.data_base['Savings Balance'] = new_amount
+
+                    else:
+                        for keys, values in self.data_base: #     getting error here
+                            for k, v in values.items():
+                                if keys == self.user_validation and k == 'Checkings Balance':
+                                    new_amount1 = v - amount_d
+                                    self.data_base['Checkings Balance'] = new_amount1
+
 
                 def withdraw(
                         self):  # take user input and subtract that from either the savings account or checkings accont
@@ -76,16 +97,16 @@ class Bank:
                 self.user_input = input('Please select an option')
 
                 if self.user_input == 'C':
-                    checkings_balance()
+                    checkings_balance(self)
 
                 elif self.user_input == 'S':
                     savings_balance(self)
 
                 elif self.user_input == 'D':
-                    deposit()
+                    deposit(self)
 
                 elif self.user_input == 'W':
-                    withdraw()
+                    withdraw(self)
 
                 elif self.user_input == 'E':
                     exit()
