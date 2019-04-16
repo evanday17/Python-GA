@@ -1,9 +1,13 @@
 #  the class is what is inside my bank and how to complete a transaction
-#  the object is the transaction ?????????????????????????????
+ # maybe i need to make this into 2 different classes
+# classes to verify user and class for transactions
+# we do this so you can reuse the verify class
+# print(globals()) to see all of the global vars
+# print(locals()) to see all local vars
 
 
 class Bank:
-        def __init__(self,):
+        def __init__(self):
 
             self.data_base = {  # create the dict of user names, pws and balances
 
@@ -56,14 +60,14 @@ class Bank:
                 else:
                     print("You entered an invalid user name and/or password")
 
-                def savings_balance(self):
+                def savings_balance(self):  # this works
                     for keys, values in self.data_base.items():
                         for k, v in values.items():
                             if keys == self.user_validation:
                                 if k == 'Savings Balance':
                                     print(v)
 
-                def checkings_balance(self):  # print the checkings balance
+                def checkings_balance(self):  # print the checkings balance...this works
                     for keys, values in self.data_base.items():
                         for k, v in values.items():
                             if keys == self.user_validation:
@@ -73,25 +77,23 @@ class Bank:
 
                 def deposit(self):  # add deopsit to either the checkings or savings account
                     what_account = input("What account would you like to deposit to: Savings or Checkings")
-                    amount_d = input("how much are you going to deposit")
+                    amount_d = float(input("how much are you going to deposit"))
 
                     if what_account == 'Savings':
-                        for keys, values in self.data_base: #     getting error here
+                        for keys, values in self.data_base.items():  # getting error here
                             for k, v in values.items():
                                 if keys == self.user_validation and k == 'Savings Balance':
                                     new_amount = v + amount_d
                                     self.data_base['Savings Balance'] = new_amount
 
                     else:
-                        for keys, values in self.data_base: #     getting error here
+                        for keys, values in self.data_base:  # do i need to use global var here?!?!
                             for k, v in values.items():
                                 if keys == self.user_validation and k == 'Checkings Balance':
                                     new_amount1 = v - amount_d
                                     self.data_base['Checkings Balance'] = new_amount1
 
-
-                def withdraw(
-                        self):  # take user input and subtract that from either the savings account or checkings accont
+                def withdraw(self):  # take user input and subtract that from either savings account/heckings accont
                     print("How much would you like to withdraw?")
 
                 self.user_input = input('Please select an option')
@@ -117,7 +119,6 @@ class Bank:
 
 def main():
     chase = Bank()
-
 
 
 if __name__ == '__main__':
