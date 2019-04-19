@@ -10,9 +10,11 @@ class Animal:
 
 
 class Dog(Animal):
-    def __init__(self):
+    def __init__(self,):
         super().__init__()
         print('Dog is born')
+        test = 1
+        print(test)
 
 
 def main():
