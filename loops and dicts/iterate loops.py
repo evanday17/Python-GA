@@ -17,3 +17,7 @@ if x in mylist:
     mylist.remove(x)
 print(mylist)
 
+
+
+#  IF PRINT IS INSIDE OF THE LOOP IT WILL KEEP PRINTING EVRYTHING OUT
+

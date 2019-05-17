@@ -1,3 +1,6 @@
+#def test(*args) this lets you pass as many arguemnts are you want
+#  split() is only for strings maybe i need to convert everything to a str so i can split by ','
+
 import datetime
 
 date = datetime.date.today().isoformat()
@@ -220,6 +223,9 @@ class Customer(BankTeller):
                         text_file = open(f, 'w') #  creates the text file
                         text_file.write(text)    # writes the data
                         return text_file
+
+
+ #  maybe use print[0] for the list
 
                     def read_file(f):  # need to format the data but i cannot for SOME REASONNNNNNNN
                         d= {}
